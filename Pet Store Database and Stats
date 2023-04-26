@@ -23,7 +23,7 @@ SELECT * FROM pet_store ORDER BY price;
 
 
 --what is the avg price of treats? 
-SELECT AVG(price) "avg treat price"
+SELECT ROUND(AVG(price),2) "avg treat price"
 FROM pet_store
 where section='treat';
 
