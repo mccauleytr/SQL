@@ -12,7 +12,7 @@ INSERT INTO pet_store VALUES (7,"topple","gear",4,16.79);
 INSERT INTO pet_store VALUES (8,"tug","toy",9,14.00);
 INSERT INTO pet_store VALUES (9,"prong","gear",2,3.49);
 INSERT INTO pet_store VALUES (10,"bully stick","treat",14,3.99);
-INSERT INTO pet_store VALUES (11,"cake","treat",2,12.99); 
+INSERT INTO pet_store VALUES (11,"cake","treat",1,12.99); 
 INSERT INTO pet_store VALUES (12,"pig ear","treat",5,2.00);
 INSERT INTO pet_store VALUES (13,"ball","toy",6,1.15);
 INSERT INTO pet_store VALUES (14,"long lead","gear",3,6.00);
@@ -27,8 +27,8 @@ SELECT ROUND(AVG(price),2) "avg treat price"
 FROM pet_store
 where section='treat';
 
---what 5 items do we have the most of? 
+--what 5 items do we have the least of? 
 SELECT item, price, quantity
 FROM pet_store
-order by quantity desc
+order by quantity asc
 limit 5; 
